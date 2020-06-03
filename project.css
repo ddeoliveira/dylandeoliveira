@@ -1,0 +1,19 @@
+body{
+    margin:auto;
+    width:1000px;
+}
+.card {
+    border-radius: 16px;
+    list-style: none;
+    width: 800px;
+    padding: 20px;
+    margin:20px;
+    float: left;
+
+}
+
+.card img {
+    width: 800px;
+    border-radius: 12px;
+}
+

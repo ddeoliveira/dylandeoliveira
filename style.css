@@ -1,0 +1,22 @@
+.card {
+    border: solid 1px lightgray;
+    border-radius: 16px;
+    list-style: none;
+    width: 250px;
+    padding: 20px;
+    margin:20px;
+    float: left;
+
+}
+
+.card img {
+    width: 250px;
+    border-radius: 12px;
+}
+
+.button {
+    background-color: mediumpurple;
+    color: white;
+    border-radius: 25px;
+    padding: 10 25;
+}
