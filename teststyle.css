@@ -33,19 +33,18 @@ h1 {
     height: 80vh;
     width: 38vh;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 10px;
     transition: width 0.6s ease-in-out;
 
   }
 
   .item img:hover{
     width: 43vh;
+    
 
   }
 
-  .content{
 
-  }
   
 
   h3 {
