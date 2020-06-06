@@ -1,0 +1,19 @@
+.wrapper {
+    width: 100%;
+    overflow-x:scroll;
+    white-space: nowrap;
+    float:left;
+    position: relative;
+  }
+  
+  .item {
+    display: inline-block;
+    list-style: none;
+    padding: 2%;
+    
+  }
+
+  .item img {
+    max-height: 100vh;
+    max-width: 75vh;
+  }
