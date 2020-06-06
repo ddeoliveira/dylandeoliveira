@@ -7,8 +7,8 @@
     <div  id="app" class="wrapper">
         <ul>
         <li class="item" v-for="item in items">
-            <div class="content"><img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']">
-            <h3>{{ item['fields']['Item'] }}</h3>
+            <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']">
+            <div class="content"><h3>{{ item['fields']['Item'] }}</h3>
             </div>
 
         </li>
