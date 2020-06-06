@@ -1,5 +1,5 @@
 body{
-    background-color: darkslategray;
+    background-color: #3D4650;
 }
 
 .wrapper {
@@ -14,11 +14,11 @@ body{
     display: inline-block;
     list-style: none;
     padding: 2%;
-    border-radius: 5px;
     
   }
 
   .item img {
     max-height: 100vh;
     max-width: 75vh;
+    border-radius: 5px;
   }
