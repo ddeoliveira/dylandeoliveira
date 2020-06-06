@@ -1,5 +1,10 @@
+
 body{
     background-color: #3D4650;
+    height: 100%;
+    overflow-y: hidden;
+    overflow-x:scroll;
+
 }
 
 .wrapper {
@@ -8,6 +13,7 @@ body{
     white-space: nowrap;
     float:left;
     position: relative;
+    overflow-x:scroll;
   }
   
   .item {
@@ -18,7 +24,7 @@ body{
   }
 
   .item img {
-    max-height: 100vh;
+    max-height: 90vh;
     max-width: 75vh;
     border-radius: 5px;
   }
