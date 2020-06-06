@@ -26,12 +26,12 @@ body{
     width: 38vh;
     object-fit: cover;
     border-radius: 5px;
-    transition: width 1s ease-in-out;
+    transition: width 0.6s ease-in-out;
 
   }
 
   .item img:hover{
-    width: 50vh;
+    width: 45vh;
 
   }
 
@@ -47,7 +47,6 @@ body{
     color: white;
     margin-top: -65px;
     margin-left: 25px;
-    box-shadow: -10px 5px 5px black;
-  
+    text-shadow: -2px 2px 10px black;
   }
 
