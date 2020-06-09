@@ -11,15 +11,39 @@ body{
     list-style: none;
     width: 100%;
     max-width: 880px;
-    padding: 20px;
+    padding: 2vh;
     margin:20px;
     float: left;
 
 }
 
 .content img {
-    width: 800px;
+    width: 100%;
     border-radius: 12px;
-    padding: 10vh;
 }
 
+h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2vh;
+    font-weight: thin;
+    color: #87848E;
+}
+
+.back-cta {
+    background-color: #5D63FF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8vh;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    padding: 1vh 2vh;
+    margin-top: 3vh;
+    margin-left: 6vh;
+}
