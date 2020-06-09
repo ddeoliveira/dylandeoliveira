@@ -5,14 +5,18 @@
 </head>
 <body>
 
+    
+
     <h1> LOGO </h1>
     <div  id="app" class="wrapper">
         <ul>
         <li class="item" v-for="item in items">
-            <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']">
-            <div class="content"><h3>{{ item['fields']['Item'] }}</h3>
-            </div>
+            <div class="image-wrapper"><img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']"></div>
 
+            <div class="content"><h3>{{ item['fields']['Item'] }}</h3>
+                <a class="button" :href="item['fields']['URL']"> voir plus</a>
+            </div>
+           
         </li>
        
     </ul>
