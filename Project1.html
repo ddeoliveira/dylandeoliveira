@@ -7,7 +7,7 @@
 
     <div id="app">
         <ul>
-            <li class="card" v-for="item in items">
+            <li class="content" v-for="item in items">
                 <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="150">
                 <h1>{{ item['fields']['Item'] }}</h1>
                 <p>{{ item['fields']['Description'] }}</p>
