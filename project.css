@@ -34,6 +34,7 @@ h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 4vh;
     font-weight: bold;
+    padding: 0;
 }
 
 p {
@@ -48,13 +49,21 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.8vh;
     text-decoration: none;
-    color: white;
+    color: #B9B9B9;
     border-radius: 10px;
     padding: 1vh 2vh;
     position: absolute;
     top:0;
     left:-10vh;
+    transition: all 0.3s ease-out;
 }
+
+.back-cta:hover{
+    background-color: rgba(46, 42, 57, 1);
+    color: white;
+    transform: scale(1.1);
+}
+
 
 @media only screen and (max-width: 1100px) {
     .back-cta {
@@ -64,13 +73,15 @@ p {
     }
 }
 
-
-
-
 .content-grid2{
         background-color: #3B3647;
         border-radius: 16px;
         padding: 2vh;
+    }
+
+#content-grid-button{
+    background-color: rgba(46, 42, 57, 0);
+    padding:0;
     }
 
 @media only screen and (min-width: 800px) {
@@ -192,4 +203,24 @@ p {
     background-color: #FBD572;
     border-radius: 6px;
  
+}
+
+.button {
+    background-color:;
+    border: solid 1px #FBD572;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8vh;
+    text-align: center;
+    text-decoration: none;
+    color: #FBD572;
+    border-radius: 10px;
+    padding: 1.5vh 2vh;
+    margin-top: 2vh;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    background-color: #FBD572;
+    color: #161220;
+    transform: scale(1.03);
 }
