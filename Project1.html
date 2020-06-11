@@ -4,23 +4,50 @@
     <link rel="stylesheet" media="screen" type="text/css" href="project.css"/>
 </head>
 <body>
-    <a class ="back-cta" href="test-slider.html">back</a>
   
 
     <div id="app">
         <ul>
             <li class="content" v-for="item in items">
                 <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="150">
+                <a class ="back-cta" href="test-slider.html">back</a>
                 <h1>{{ item['fields']['Item'] }}</h1>
                 <div class="grid">
                     <div class="content-grid1">
                       <p>{{ item['fields']['Description'] }}</p>
                     </div>
                     <div class="content-grid2">
-                        <p>Date</p>
-                        <p>Role</p>
-                        <p>Client</p>
 
+                        <div class="information-item">
+                            <div class="information-box-icon">
+                                <div class="information-icon"></div>
+                            </div>
+                            
+                            <div>
+                                <p>Date</p>
+                                <p>{{ item['fields']['Date'] }}</p>
+                             </div>
+                        </div>
+
+                        <div class="information-item">
+                            <div class="information-box-icon">
+                                <div class="information-icon"></div>
+                            </div>
+                            <div>
+                                <p>Role</p>
+                                <p>{{ item['fields']['Role'] }}</p>
+                             </div>
+                        </div>
+
+                        <div class="information-item">
+                            <div class="information-box-icon">
+                                <div class="information-icon"></div>
+                            </div>
+                            <div>
+                                <p>Client</p>
+                                <p>{{ item['fields']['Client'] }}</p>
+                             </div>
+                        </div>
                     </div>
 
                 </div>
