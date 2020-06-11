@@ -11,7 +11,14 @@
             <li class="content" v-for="item in items">
                 <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="150">
                 <a class ="back-cta" href="test-slider.html">back</a>
-                <h1>{{ item['fields']['Item'] }}</h1>
+                <div class="grid">
+                    <div class="content-grid1">
+                        <h1>{{ item['fields']['Item'] }}</h1>
+                    </div>
+                    <div class="content-grid2" id="content-grid-button">
+                        <div class="button"> voir le projet</div>
+                    </div>
+                </div>
                 <div class="grid">
                     <div class="content-grid1">
                       <p>{{ item['fields']['Description'] }}</p>
