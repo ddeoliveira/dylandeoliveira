@@ -127,10 +127,16 @@ h1 {
     border-radius: 10px;
   }
 
+  ul {
+  padding-inline-start: 0px;
+  margin-left: 2vh;
+
+}
+
     /*image projet*/
   .item img{
     opacity: 1;
-    height: 75vh;
+    height: 70vh;
     width: 38vh;
     object-fit: cover;
     border-radius: 1vh;
