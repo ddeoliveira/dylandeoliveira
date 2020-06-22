@@ -191,7 +191,7 @@ h1 {
     width: 38vh;
     height: 20vh;
     left: 0;
-    bottom: 0;
+    bottom: -1px;
     border-radius: 1vh;
     transition: all 0.6s ease-in-out;
 
