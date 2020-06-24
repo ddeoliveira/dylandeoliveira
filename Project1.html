@@ -1,5 +1,6 @@
 <html>
 <head>
+    <title>Sakana</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" media="screen" type="text/css" href="project.css"/>
 
@@ -11,7 +12,7 @@
         <ul>
             <li class="content" v-for="item in items">
                 <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']" width="150">
-                <a class ="back-cta" href="test-slider.html">back</a>
+                <a class ="back-cta" href="allprojects.html">back</a>
                 <div class="grid">
                     <div class="content-grid1">
                         <h1>{{ item['fields']['Item'] }}</h1>
