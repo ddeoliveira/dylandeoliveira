@@ -201,13 +201,13 @@ header{
       display: none;
   }
 
-  .item.responsive{
+  .item.open{
       background-color: #2F2A3A;
       transition: all 0.2s ease-in-out;
 
 }
    
-.item.responsive .item-more-info{
+.item.open .item-more-info{
         display: flex;
     }
 
