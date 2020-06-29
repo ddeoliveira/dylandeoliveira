@@ -5,6 +5,7 @@
     <link rel="stylesheet" media="screen" type="text/css" href="about.css"/>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
 </head>
 <body>
     <header>
@@ -24,7 +25,7 @@
     <section class="content-wrapper">
         <h2>Experiences</h2>
         
-        <div class="item" id="myItem" onclick="openItem()">
+        <div class="item" id="myItem1" onclick="openItem('myItem1')">
             <div class="item-content">
                 <div class="item-icon">
                 <img src="images/novalux.png"></img>
@@ -39,7 +40,7 @@
             </div>
         </div>
 
-        <div class="item" id="myItem" onclick="openItem()">
+        <div class="item" id="myItem2" onclick="openItem('myItem2')">
             <div class="item-content">
                 <div class="item-icon">
                 <img src="images/novalux.png"></img>
@@ -54,7 +55,7 @@
             </div>
         </div>
 
-        <div class="item" id="myItem" onclick="openItem()">
+        <div class="item" id="myItem3" onclick="openItem('myItem3')">
             <div class="item-content">
                 <div class="item-icon">
                 <img src="images/novalux.png"></img>
@@ -77,7 +78,7 @@
     <section class="content-wrapper">
         <h2>Education</h2>
         
-        <div class="item" id="myItem" onclick="openItem()">
+        <div class="item" id="myItem4" onclick="openItem('myItem4')">
             <div class="item-content">
                 <div class="item-icon">
                 <img src="images/novalux.png"></img>
@@ -92,7 +93,7 @@
             </div>
         </div>
 
-        <div class="item" id="myItem" onclick="openItem()">
+        <div class="item" id="myItem5" onclick="openItem('myItem5')">
             <div class="item-content">
                 <div class="item-icon">
                 <img src="images/novalux.png"></img>
@@ -107,7 +108,7 @@
             </div>
         </div>
 
-        <div class="item" id="myItem" onclick="openItem()">
+        <div class="item" id="myItem6" onclick="openItem('myItem6')">
             <div class="item-content">
                 <div class="item-icon">
                 <img src="images/novalux.png"></img>
@@ -118,7 +119,7 @@
                 </div>
           </div>
             <div class="item-more-info">
-                <p>Blablablablablabla</p>
+                <p>Blablablablab lablaBlablablablab lablaBl ablablabl ablablaBlablab lablablabl aBlablabla blablabl aBl ablab lablablablaBl ablablabla blablaBla blabla blabl abla</p>
             </div>
         </div>
 
@@ -129,6 +130,7 @@
 </div>
 
     <script type="text/javascript">
+    
         /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
             function myFunction() {
                 var x = document.getElementById("myTopnav");
@@ -139,14 +141,37 @@
                 }
             }
 
-            function openItem() {
-                    var x = document.getElementById("myItem");
+            var activeItem = 0;
+            function openItem(ID) {
+                var x = document.getElementById(ID);
+                var items = document.getElementsByClassName("item");
+                for (var i=0; i<items.length; i++){
+                    items[i].classList.remove("open");
+                    
+                }
+
+            if (activeItem!==ID){    
                 if (x.className === "item") {
                     x.className += " open";
+                    activeItem=ID;
                 } else {
                     x.className = "item";
                 }
             }
+            else {
+                x.className="item";
+                activeItem="0";
+                
+            }
+        }
+
+
+            anime({
+            targets: '.item.open',
+            height: [0,100],
+            easing: 'linear'
+            });
+
         </script>
 
 </body>
