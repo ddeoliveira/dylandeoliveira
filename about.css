@@ -164,7 +164,7 @@ header{
 
   @media screen and (max-width: 600px) {
     
-    .content {
+  .content {
     display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
@@ -179,11 +179,12 @@ header{
      }
  }
   .item{
+      width: 90%;
       margin-top: 10px;
       border-radius: 15px;
       background-color: #1F1B2A;
       padding: 20px ;
-      transition: all 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
 
   .item-content {
@@ -198,7 +199,9 @@ header{
   }
 
   .item-more-info{
+      
       display: none;
+      width: 100%;
   }
 
   .item.open{
@@ -208,7 +211,8 @@ header{
 }
    
 .item.open .item-more-info{
-        display: flex;
+        display: block;
+       
     }
 
   .item img {
