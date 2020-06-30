@@ -168,14 +168,14 @@ header{
 
   @media screen and (max-width: 600px) {
     
-  .content {
-    display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-}
+    .content {
+      display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
      .content-wrapper {
          width: 80%;
          padding: 30px;
