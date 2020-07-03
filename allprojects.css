@@ -19,6 +19,10 @@ a {
 .topnav {
   overflow: hidden;
   display: flex;
+  background-color: #34354D;
+  border-radius: 50px;
+  padding: 7px 10px;
+  margin-bottom: 10px;
 }
 
 /* Style the links inside the navigation bar */
@@ -27,21 +31,24 @@ a {
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 14px 16px;
+  padding: 14px 40px;
+  margin-left: 0px;
   text-decoration: none;
   font-size: 17px;
   font-family: 'Roboto', sans-serif;
+  border-radius: 50px;
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-  background-color: #2F2A3A;
+  background-color: #6E6F91;
   color: white;
 }
 
 /* Add an active class to highlight the current page */
 .topnav a.active {
-  color: #FBD572;
+  color: #F2F2F2;
+  background-color: #8D91FB;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -125,7 +132,7 @@ a {
 
 
 body{
-    background-color: #1B1823;
+    background-color: #141220;
     height: 90%;
 
 }
@@ -161,14 +168,55 @@ h1 {
 
   /*conteneur image projet*/
   .image-wrapper {
-    background-color: #3B3647;  
+    background-color: #8D91FB;  
     border-radius: 10px;
+    position: relative;
   }
 
   ul {
   padding-inline-start: 0px;
   margin-left: 2vh;
 
+}
+
+.side-info {
+  top:2vh;
+  width: 100%;
+  position: absolute;
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+  align-content: stretch;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.3em;
+  font-weight: 300;
+  color: white;
+}
+
+#number {
+  margin-left:-50px;
+  opacity: 0;
+  transition: margin-left 0.4s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+
+.item:hover #number {
+  margin-left: 20px;
+  opacity: 1;
+}
+
+#date {
+  margin-right:-50px;
+  opacity: 0;
+  transition: margin-right 0.4s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+
+.item:hover #date {
+  margin-right: 20px;
+  opacity: 1;
 }
 
     /*image projet*/
@@ -185,6 +233,8 @@ h1 {
   .item:hover img{
     width: 43vh;
     filter:brightness(70%);
+    opacity: 0.3;
+    filter: grayscale(80%);
 
 
   }
@@ -225,18 +275,23 @@ h1 {
 
     /*cta projet*/
   .button {
-    background-color: #5D63FF;
+    background-color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 1.8vh;
     text-decoration: none;
-    color: white;
+    color: #8D91FB;
     border-radius: 10px;
     padding: 1vh 2vh;
     margin-top: 18vh;
     margin-left: 3vh;
     position: absolute;
     opacity: 0;
-    transition: margin-top 0.4s ease-in-out, opacity 0.2s ease-in-out;
+    transition: margin-top 0.4s ease-in-out, opacity 0.2s ease-in-out,transform 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.08);
+
 }
 
   .item:hover .button{
