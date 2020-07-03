@@ -1,0 +1,78 @@
+
+<!-- saved from url=(0072)file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/allprojects.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>All projects</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" media="screen" type="text/css" href="./All projects_files/allprojects.css">
+    <link href="./All projects_files/boxicons.min.css" rel="stylesheet">
+    <link href="./All projects_files/css2" rel="stylesheet">
+</head>
+<body>
+
+    
+    <header>
+
+        <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/index.html"> <h1> LOGO </h1></a>
+        <div class="topnav" id="myTopnav">
+            <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/allprojects.html" class="active">projects.</a>
+            <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/about.html">about.</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="bx bx-menu-alt-right" id="menu"></i>
+                <i class="bx bx-x" id="exit"></i>
+            </a>
+        </div>
+    </header>
+
+
+
+    <div id="app" class="wrapper"><ul><li class="item"><div class="image-wrapper"><div class="side-info"><div id="number">- 01</div> <div id="date">2019</div></div> <img src="./All projects_files/85610bef" alt=""></div> <div class="content"><h3>Sakana</h3> <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/Project1.html" class="button"> voir plus</a></div></li><li class="item"><div class="image-wrapper"><div class="side-info"><div id="number">- 01</div> <div id="date">2019</div></div> <img src="./All projects_files/f70b9324" alt=""></div> <div class="content"><h3>Novalux</h3> <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/Project2.html" class="button"> voir plus</a></div></li><li class="item"><div class="image-wrapper"><div class="side-info"><div id="number">- 01</div> <div id="date">2019</div></div> <img src="./All projects_files/249f4fd5" alt=""></div> <div class="content"><h3>Vert de vrai</h3> <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/Project3.html" class="button"> voir plus</a></div></li><li class="item"><div class="image-wrapper"><div class="side-info"><div id="number">- 01</div> <div id="date">2019</div></div> <img src="./All projects_files/f70b9324" alt=""></div> <div class="content"><h3>Novalux copy</h3> <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/Project2.html" class="button"> voir plus</a></div></li><li class="item"><div class="image-wrapper"><div class="side-info"><div id="number">- 01</div> <div id="date">2019</div></div> <img src="./All projects_files/f70b9324" alt=""></div> <div class="content"><h3>Novalux copy copy</h3> <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/Project2.html" class="button"> voir plus</a></div></li><li class="item"><div class="image-wrapper"><div class="side-info"><div id="number">- 01</div> <div id="date">2019</div></div> <img src="./All projects_files/828d13f3" alt=""></div> <div class="content"><h3>Sakana copy</h3> <a href="file:///C:/Users/dylan/Documents/GitHub/dylandeoliveira/Project1.html" class="button"> voir plus</a></div></li></ul></div>
+
+    <script type="text/javascript" src="./All projects_files/vue"></script>
+
+    <script type="text/javascript" src="./All projects_files/axios.min.js.téléchargement"></script>
+    <script type="text/javascript">
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+        }
+    </script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                items: []
+            },
+            mounted: function(){
+               this.loadItems(); 
+            },
+            methods: {
+                loadItems: function(){
+                    
+                    // Init variables
+                    var self = this
+                    var app_id = "appp3inudTpJ0e3zO";
+                    var app_key = "keyu3FcfOEwGkjLYt";
+                    this.items = []
+axios.get(
+                        "https://api.airtable.com/v0/"+app_id+"/Menu?view=Grid%20view",
+                        { 
+                            headers: { Authorization: "Bearer "+app_key } 
+                        }
+                    ).then(function(response){
+                        self.items = response.data.records
+                    }).catch(function(error){
+                        console.log(error)
+                    })
+                }
+            }
+        })
+    </script>
+
+
+
+</body></html>
