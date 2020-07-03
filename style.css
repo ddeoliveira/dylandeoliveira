@@ -51,13 +51,21 @@ img {
 .socialnetwork {
     margin-top: 10px;
     font-size: 2.3em;
-    color: white;
-    background-color: #3B3647;
+    color: #9798BB;
+    background-color: #23202E;
     width: 35px;
     height: 35px;
     padding: 20px;
     border-radius:50px;   
     margin-right: 40px;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+}
+
+.socialnetwork:hover {
+  color: #DCDDEF;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .content-wrapper {
@@ -269,7 +277,7 @@ img {
   
   
   body{
-      background-color: #1B1823;
+      background-color: #141220;
       height: 90%;
       width: 100%;
       overflow-y:hidden;
