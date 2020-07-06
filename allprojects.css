@@ -14,9 +14,22 @@ a {
   text-decoration: none;
 }
 
+.logo {
+  width: 200px;
+}
 
+
+.logo img
+{
+  left: 3vw;
+  top:2vh;
+  width: 180px;
+}
+  
 /*navbar*/
 .topnav {
+  margin-top:2vh;
+  margin-right:2vw;
   overflow: hidden;
   display: flex;
   background-color: #34354D;
@@ -24,6 +37,7 @@ a {
   padding: 7px 10px;
   margin-bottom: 10px;
 }
+
 
 /* Style the links inside the navigation bar */
 .topnav a {
@@ -37,6 +51,10 @@ a {
   font-size: 17px;
   font-family: 'Roboto', sans-serif;
   border-radius: 50px;
+}
+
+.topnav a:first-child{
+  margin-right: 15px;
 }
 
 /* Change the color of links on hover */
