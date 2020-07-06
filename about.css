@@ -10,39 +10,66 @@ header{
   
   }
 
+  
+
   a {
     text-decoration: none;
   }
+ 
+  .logo {
+    width: 200px;
+  }
   
+
+  .logo img
+  {
+    left: 3vw;
+    top:2vh;
+    width: 180px;
+  }
+    
   /*navbar*/
   .topnav {
+    margin-top:2vh;
+    margin-right:2vw;
     overflow: hidden;
     display: flex;
+    background-color: #34354D;
+    border-radius: 50px;
+    padding: 7px 10px;
+    margin-bottom: 10px;
   }
   
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #2F2A3A;
-    color: white;
-  }
-  
-  /* Add an active class to highlight the current page */
-  .topnav a.active {
-    color: #FBD572;
-  }
-  
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 40px;
+  margin-left: 0px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 50px;
+}
+
+.topnav a:first-child{
+  margin-right: 15px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #6E6F91;
+  color: white;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  color: #F2F2F2;
+  background-color: #8D91FB;
+}
   /* Hide the link that should open and close the topnav on small screens */
   .topnav .icon {
     display: none;
