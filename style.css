@@ -242,6 +242,12 @@ img {
     float: right;
     display: block;
   }
+  .logo img
+  {
+    left: 3vw;
+    top:2vh;
+    width: 140px;
+  }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -287,11 +293,16 @@ img {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     margin-bottom: 50px;
     text-decoration: none;
     font-size: 40px;
     font-weight: 600;
+
+  }
+
+  .topnav.responsive a:hover {
+    background-color: rgba(0,0,0,.0);
 
   }
 
@@ -312,6 +323,7 @@ img {
     text-align: left;
   }
 }
+  
 
   
   
