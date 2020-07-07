@@ -288,7 +288,7 @@ img {
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-decoration: none;
     font-size: 40px;
     font-weight: 600;
@@ -304,6 +304,7 @@ img {
     display: flex;
     right: 0;
     top: 0;
+    background-color: #34354D;
   }
   .topnav.responsive a {
     float: none;
