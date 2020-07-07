@@ -3,11 +3,9 @@ header{
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-between;
-	align-items: baseline;
+	align-items: center;
   align-content: center;
   margin-left: 2vh;
-
-
 }
 
 a {
@@ -16,17 +14,16 @@ a {
 
 .logo {
   width: 200px;
+  left:3vw;
 }
 
 
 .logo img
 {
   left: 3vw;
-  top:2vh;
   width: 180px;
 }
-  
-/*navbar*/
+  /*navbar*/
 .topnav {
   margin-top:2vh;
   margin-right:2vw;
@@ -87,6 +84,12 @@ a {
     float: right;
     display: block;
   }
+  .logo img
+  {
+    left: 3vw;
+    top:2vh;
+    width: 140px;
+  }
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
@@ -132,11 +135,16 @@ a {
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     margin-bottom: 50px;
     text-decoration: none;
     font-size: 40px;
     font-weight: 600;
+
+  }
+
+  .topnav.responsive a:hover {
+    background-color: rgba(0,0,0,.0);
 
   }
 
@@ -157,7 +165,7 @@ a {
     text-align: left;
   }
 }
-
+  
 
 
 body{
