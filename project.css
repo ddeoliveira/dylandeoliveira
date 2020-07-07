@@ -40,7 +40,7 @@ h1 {
 .button {
   border: solid 1px #8D91FB;
   font-family: 'Roboto', sans-serif;
-  font-size: 1.8vh;
+  font-size: 1rem;
   text-align: center;
   text-decoration: none;
   color:#8D91FB;
