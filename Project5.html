@@ -1,0 +1,220 @@
+<html>
+<head>
+  <link rel="icon" href="images/favicon.ico" />
+  <title> Gather</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" media="screen" type="text/css" href="project.css"/>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+  
+
+    <div id="app">
+        <ul>
+            <li class="content" v-for="item in items">
+                <img :src="item['fields']['Photo'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Photo']"  class="coverimg">
+                <a class ="back-cta" href="allprojects.html"><i class='bx bx-x' ></i></a>
+                <div class="grid">
+                    <div class="content-grid1">
+                        <h1>{{ item['fields']['Item'] }}</h1>
+                    </div>
+                    <div class="content-grid2" id="content-grid-button">
+                        <a style=" text-decoration: none;" :href="item['fields']['URL']" v-if="item['fields']['URL']" ><div  class="button"> open the project </div></a>
+                    </div>
+                </div>
+                <div class="grid">
+                    <div class="content-grid1">
+                      <p>{{ item['fields']['Description'] }}</p>
+                    </div>
+                    <div class="content-grid2">
+
+                        <div class="information-item">
+                            <div class="information-box-icon">
+                                <div class="information-icon"><i class='bx bxs-calendar-alt'></i></div>
+                            </div>
+                            
+                            <div>
+                                <p>Date</p>
+                                <p>{{ item['fields']['Date'] }}</p>
+                             </div>
+                        </div>
+
+                        <div class="information-item">
+                            <div class="information-box-icon">
+                                <div class="information-icon"><i class='bx bxs-shapes' ></i></div>
+                            </div>
+                            <div>
+                                <p>Role</p>
+                                <p>{{ item['fields']['Role'] }}</p>
+                             </div>
+                        </div>
+
+                        <div class="information-item">
+                            <div class="information-box-icon">
+                                <div class="information-icon"><i class='bx bxs-user-rectangle' ></i></div>
+                            </div>
+                            <div>
+                                <p>Client</p>
+                                <p>{{ item['fields']['Client'] }}</p>
+                             </div>
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <div class="grid-img" class="content" v-for="item in items">
+
+                    <div class="img-wrapper">
+                        <img :src="item['fields']['Image1'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Image1']" onclick="openModal();currentSlide(1)" class="hover-shadow">
+                    <div class="zoom"><i class='bx bx-zoom-in'  onclick="openModal();currentSlide(1)"></i></div>
+                    </div>
+        
+                    <div class="img-wrapper">
+                        <img :src="item['fields']['Image2'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Image2']"onclick="openModal();currentSlide(2)" class="hover-shadow">
+                        <div class="zoom"><i class='bx bx-zoom-in'  onclick="openModal();currentSlide(2)"></i></div>
+                    </div>
+
+                    <div class="img-wrapper">
+                        <img :src="item['fields']['Image3'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Image3']"onclick="openModal();currentSlide(3)" class="hover-shadow">
+                        <div class="zoom"><i class='bx bx-zoom-in'  onclick="openModal();currentSlide(3)"></i></div>
+                    </div>
+
+                    <div class="img-wrapper">
+                      <img :src="item['fields']['Image4'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Image4']"onclick="openModal();currentSlide(4)" class="hover-shadow">
+                      <div class="zoom"><i class='bx bx-zoom-in'  onclick="openModal();currentSlide(4)"></i></div>
+                    </div>
+
+                    <div class="img-wrapper">
+                      <img :src="item['fields']['Image5'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Image5']"onclick="openModal();currentSlide(5)" class="hover-shadow">
+                      <div class="zoom"><i class='bx bx-zoom-in'  onclick="openModal();currentSlide(5)"></i></div>
+                    </div>
+
+                    <div class="img-wrapper">
+                      <img :src="item['fields']['Image6'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Image6']"onclick="openModal();currentSlide(6)" class="hover-shadow">
+                      <div class="zoom"><i class='bx bx-zoom-in'  onclick="openModal();currentSlide(6)"></i></div>
+                    </div>
+
+                </div>
+                  
+                  <!-- The Modal/Lightbox -->
+              <div id="myModal" class="modal">
+                <div class="close cursor" onclick="closeModal()"><i class='bx bx-x' ></i></div>
+                  <div class="modal-content"  v-for="item in items">
+                      <div class="mySlides">
+                        <img :src="item['fields']['Image1'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Image1']" >
+                      </div>
+                      <div class="mySlides">
+                        <img :src="item['fields']['Image2'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Image2']">
+                      </div>
+                  
+                      <div class="mySlides">
+                        <img :src="item['fields']['Image3'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Image3']" >
+                      </div>
+                  
+                      <div class="mySlides">
+                        <img :src="item['fields']['Image4'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Image4']" >
+                      </div>
+
+                      <div class="mySlides">
+                        <img :src="item['fields']['Image5'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Image5']" >
+                      </div>
+                     
+                      <div class="mySlides">
+                        <img :src="item['fields']['Image6'][0]['thumbnails']['full']['url']" alt="" v-if="item['fields']['Image6']" >
+                      </div>
+                     
+                  
+                      <!-- Caption text -->
+                      <div class="caption-container">
+                        <p id="caption"></p>
+                      </div>
+                  
+                  </div>  
+                   <!-- Next/previous controls -->
+                   <a class="prev" onclick="plusSlides(-1)"><i class='bx bx-left-arrow-alt'></i></a>
+                   <a class="next" onclick="plusSlides(1)"><i class='bx bx-right-arrow-alt' ></i></a>
+            </div><!--app-->
+        
+
+
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script>
+        //LIGHTBOX
+        // Open the Modal
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        // Close the Modal
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                items: []
+            },
+            mounted: function(){
+               this.loadItems(); 
+            },
+            methods: {
+                loadItems: function(){
+                    
+                    // Init variables
+                    var self = this
+                    var app_id = "appp3inudTpJ0e3zO";
+                    var app_key = "keyu3FcfOEwGkjLYt";
+                    this.items = []
+                    
+axios.get("https://api.airtable.com/v0/"+app_id+"/Gather?view=Grid%20view",
+                        { 
+                            headers: { Authorization: "Bearer "+app_key }
+                        }
+                    ).then(function(response){
+                        self.items = response.data.records
+                    }).catch(function(error){
+                        console.log(error)
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+
