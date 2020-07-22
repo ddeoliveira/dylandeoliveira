@@ -28,18 +28,21 @@
     <div  id="app" class="wrapper">
         <ul>
         <li class="item" v-for="item in items">
+            <div class="side-info">
+                <div id="number">- {{ item['fields']['Number'] }}</div>
+                <div id="date">{{ item['fields']['Year'] }}</div> 
+
+            </div>
             <div class="image-wrapper">
-                <div class="side-info">
-                    <div id="number">- 01</div>
-                    <div id="date">2019</div> 
+              
 
-                </div>
+                <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']">
 
-                <img :src="item['fields']['Photo'][0]['thumbnails']['large']['url']" alt="" v-if="item['fields']['Photo']"></div>
+            </div>
 
             <div class="content">
                 <h3>{{ item['fields']['Item'] }}</h3>
-                <a class="button" :href="item['fields']['URL']"> voir plus</a>
+                <a class="button" :href="item['fields']['URL']"> see more</a>
             </div>
            
         </li>
